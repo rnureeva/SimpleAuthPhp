@@ -68,7 +68,7 @@ require ($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
                         </table>
                     </form>
                 </div>
-            <? endif; ?>
+            <?php endif; ?>
             <?php if ($error) {
                 require_once ($_SERVER['DOCUMENT_ROOT'].'/include/error.php');
             } elseif ($success) {
