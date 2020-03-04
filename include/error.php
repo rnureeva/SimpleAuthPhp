@@ -1,1 +1,1 @@
-<h1> Неверный логин или пароль</h1>
+<h1> Wrong login or password!</h1>

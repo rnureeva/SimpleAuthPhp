@@ -148,26 +148,13 @@ a.hiddenTab {
     margin: 0 0 10px 0;
     padding: 0 10px 0 0;
 }
-    
+
 .project-folders-v {
     margin: 0;
     padding: 0;
 }
 
-.project-folders-v li {
-    list-style: none;
-    float: left;
-    background: #333333;
-    margin: 0 3px 0 0;
-    padding: 0;
-}
-
-.project-folders-v li a {
-    padding: 6px 10px;
-    text-decoration: none;
-    display: block;
-    color: #999999;
-}
+.project-folders-v li,
 .link-type li {
     list-style: none;
     float: left;
@@ -176,25 +163,20 @@ a.hiddenTab {
     padding: 0;
 }
 
-.link-type li a {
-    padding: 6px 10px;
-    text-decoration: none;
-    display: block;
-    color: white;
-}
-
-.project-folders-v li a:hover {
-    padding: 6px 10px;
-    text-decoration: none;
-    display: block;
-    color: white;
-    background: bottom repeat-x #444444;
-}
-.link-type li a:hover {
+.project-folders-v li a,
+.link-type li a  {
     padding: 6px 10px;
     text-decoration: none;
     display: block;
     color: #999999;
+}
+
+.project-folders-v li a:hover,
+.link-type li a:hover  {
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+    color: white;
     background: bottom repeat-x #444444;
 }
 
@@ -226,6 +208,6 @@ a.hiddenTab {
 .iat label {
 	display: block;
 }
-.active {   
+.active {
     text-decoration: underline;
 }

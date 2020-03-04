@@ -32,8 +32,8 @@ require ($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
         <tr>
             <td class="left-collum-index">
 
-                <h1>Возможности проекта —</h1>
-                <p>Вести свои личные списки, например покупки в магазине, цели, задачи и многое другое. Делится списками с друзьями и просматривать списки друзей.</p>
+                <h1>Welcome to Project page!</h1>
+                <p>Tell about this project to your friends!</p>
 
 
             </td>
@@ -42,9 +42,9 @@ require ($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
                 <? if (isset($_GET['login']) == 'yes' || $error == true): ?>
                  <div class="project-folders-menu">
                     <ul class="project-folders-v">
-                        <li class="project-folders-v-active"><a href="#">Авторизация</a></li>
-                        <li><a href="#">Регистрация88</a></li>
-                        <li><a href="#">Забыли пароль?</a></li>
+                        <li class="project-folders-v-active"><a href="#">Authorization</a></li>
+                        <li><a href="#">Registration</a></li>
+                        <li><a href="#">Fogot password?</a></li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>
@@ -54,18 +54,18 @@ require ($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                                 <td class="iat" <?= (!isset($_COOKIE["login"])) ? '': 'hidden' ?>
-                                    <label for="login_id">Ваш e-mail:</label>
+                                    <label for="login_id">Your email:</label>
                                     <input id="login_id" size="30" name="login" value="<?=$_COOKIE["login"] ?? ""?>" >
                                 </td>
                             </tr>
                             <tr>
                                 <td class="iat">
-                                    <label for="password_id">Ваш пароль:</label>
+                                    <label for="password_id">Your password:</label>
                                     <input id="password_id" size="30" name="password" type="password" value="<?=$_POST['password'] ?? ""?>" >
                                 </td>
                             </tr>
                             <tr>
-                                <td><input type="submit" value="Войти" name="send"></td>
+                                <td><input type="submit" value="Log in" name="send"></td>
                             </tr>
                         </table>
                     </form>

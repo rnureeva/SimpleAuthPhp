@@ -10,7 +10,7 @@ if(!isAuthUser() && (($_SERVER['REQUEST_URI']) != '/?login=yes') && (($_SERVER['
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="/styles.css" rel="stylesheet">
-    <title>Project - ведение списков</title>
+    <title>Project</title>
 </head>
 
 <body>
@@ -21,9 +21,9 @@ if(!isAuthUser() && (($_SERVER['REQUEST_URI']) != '/?login=yes') && (($_SERVER['
     </div>
     <ul class="link-type">
         <? if (!isAuthUser()): ?>
-        <li><a href="/?login=yes">Авторизация</a></li>
+        <li><a href="/?login=yes">Authorization</a></li>
         <? elseif (isAuthUser()): ?>
-        <li><a href="/?chao" >Выйти</a></li>
+        <li><a href="/?chao">Log out</a></li>
      <? endif; ?>
     </ul>
     <div class="clear">

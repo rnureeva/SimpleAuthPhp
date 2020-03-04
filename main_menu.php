@@ -1,27 +1,27 @@
 <?php
 $array = [
     [
-        'title' => 'Главная',
+        'title' => 'Main page',
         'sort' => 2,
         'path' => '/route/main/',
     ],
     [
-        'title' => 'О нас',
+        'title' => 'About us',
         'sort' => 13,
         'path' => '/route/about/',
     ],
     [
-        'title' => 'Контакты',
+        'title' => 'Contacts',
         'sort' => 7,
         'path' => '/route/contacts/',
     ],
     [
-        'title' => 'Новости',
+        'title' => 'News',
         'sort' => 50,
         'path' => '/route/news/',
     ],
     [
-        'title' => 'Каталог',
+        'title' => 'Catalog',
         'sort' => 40,
         'path' => '/route/catalog/',
     ],
