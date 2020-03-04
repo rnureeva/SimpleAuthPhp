@@ -1,7 +1,7 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/main_menu.php');
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/functionCreator.php');
-if(!isAuthUser() && (($_SERVER['REQUEST_URI']) != '/?login=yes')) {
+if(!isAuthUser() && (($_SERVER['REQUEST_URI']) != '/?login=yes') && (($_SERVER['REQUEST_URI']) != '/?chao')&& (($_SERVER['REQUEST_URI']) != '/')) {
     header('Location: /?login=yes');
 }
 ?>

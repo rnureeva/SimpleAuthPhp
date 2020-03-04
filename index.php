@@ -12,16 +12,18 @@ if (isset($_POST['send'])) {
         $_SESSION['auth_user'] = true;
         $_SESSION['login '] = $_POST["login"];
         setcookie("login", $_POST["login"], time()+60*60*24*31, '/');
-    } else {
+    } elseif($index === false && $password[$index] != $_POST['password']) {
+        echo "hjghghghghg";
         $error = true;
     }
-if (isset($_GET['chao'])) {
-session_unset();
-session_destroy();
-unset($_SESSION['auth_user']);
-setcookie("login", $_POST["login"], time()-60, '/');
-header('Location: /?login=yes');
 }
+if (isset($_GET['chao'])) {
+    session_unset();
+    unset ($_SESSION['login']);
+    session_destroy();
+    unset($_SESSION['auth_user']);
+    setcookie("login", "", time()-60, '/');
+    header('Location: /?login=yes');
 }
 require ($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
 ?>
@@ -29,24 +31,24 @@ require ($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
             <td class="left-collum-index">
-            
+
                 <h1>Возможности проекта —</h1>
                 <p>Вести свои личные списки, например покупки в магазине, цели, задачи и многое другое. Делится списками с друзьями и просматривать списки друзей.</p>
-                
-            
+
+
             </td>
             <td class="right-collum-index">
-                
+
                 <? if (isset($_GET['login']) == 'yes' || $error == true): ?>
                  <div class="project-folders-menu">
                     <ul class="project-folders-v">
                         <li class="project-folders-v-active"><a href="#">Авторизация</a></li>
-                        <li><a href="#">Регистрация</a></li>
+                        <li><a href="#">Регистрация88</a></li>
                         <li><a href="#">Забыли пароль?</a></li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>
-                
+
                 <div class="index-auth">
                     <form action="/" method="post">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -68,7 +70,7 @@ require ($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
                         </table>
                     </form>
                 </div>
-            <?php endif; ?>
+            <? endif; ?>
             <?php if ($error) {
                 require_once ($_SERVER['DOCUMENT_ROOT'].'/include/error.php');
             } elseif ($success) {
@@ -78,5 +80,5 @@ require ($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
             </td>
         </tr>
     </table>
-    
+
 <?php require ($_SERVER['DOCUMENT_ROOT'].'/template/footer.php'); ?>
